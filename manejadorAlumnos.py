@@ -24,14 +24,13 @@ class manejadorAlumnos:
                 instancia = Alumno (dni,nom,ap,car,anio)
                 self.__arregloAlumnos[indice] = instancia
                 indice += 1
-                #print ("se ingreso un alumno ")
         archivo.close
         return self.__arregloAlumnos
     
     def buscarAlumno(self,xdni):
         bandera = False
         i = 0
-        while i < self.__dimension: #and xdni != self.__arregloAlumnos[i].getDni():
+        while i < self.__dimension:
             if (self.__arregloAlumnos[i].getDni() == xdni):
                 bandera = True
             i += 1
